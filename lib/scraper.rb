@@ -11,7 +11,7 @@ class Scraper
       card.css(".student-card").each do |student|
         student_name = student.css(".student-name").text
         student_location = student.css(".student-location").text
-        student_profile = student.css("a").attribute["href"]
+        student_profile = student.css("a").attribute("href")
 
         students << {:name => student_name, :location => student_location, :profile_url => student_profile}
       end
@@ -23,7 +23,7 @@ class Scraper
     student = {}
     profile = Nokogiri::HTML(open(profile_url))
     profile.css(".social-icon-container").each do |social|
-      link = social.attribute["href"].value
+      link = social.attribute("href").value
 
     end
 
