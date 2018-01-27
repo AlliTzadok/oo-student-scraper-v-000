@@ -13,7 +13,7 @@ class Scraper
         student_location = student.css(".student-location").text
         student_profile = student.css("a")[0]["href"]
 
-        students << {:name => student_name, :location => student_location, :profile_link => student_profile}
+        students << {:name => student_name, :location => student_location, :profile_url => student_profile}
       end
     end
     students
