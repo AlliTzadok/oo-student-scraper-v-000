@@ -25,6 +25,8 @@ class Scraper
     profile.css(".social-icon-container").each do |social|
       link = social.attribute["href"].value
 
+    end
+
 
 
 
