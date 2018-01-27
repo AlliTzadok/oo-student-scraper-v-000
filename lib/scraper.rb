@@ -6,7 +6,7 @@ class Scraper
 
   def self.scrape_index_page(index_url)
     doc = Nokogiri::HTML(open(index_url))
-    doc.css(".student-card").text
+    doc.css(".roster-text-container").text
 
 
 
