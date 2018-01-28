@@ -27,7 +27,6 @@ class Student
       self.send("#{key}=", value)
     end
     self
-
   end
 
   def self.all
